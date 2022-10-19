@@ -3,4 +3,5 @@ export type PluginOptions = {
   manualMode?: boolean;
   blockGtm?: boolean;
   includeInDevelopment?: boolean;
+  geoRegions: string;
 };

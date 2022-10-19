@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-plugin-cookiebot",
-  "version": "1.0.3",
-  "description": "Gatsby plugin for Cookiebot CMP",
+  "name": "@balancedbody/gatsby-plugin-cookiebot",
+  "version": "1.0.0",
+  "description": "Gatsby plugin for Cookiebot CMP, modified for use by Balanced Body",
   "main": "index.js",
   "scripts": {
     "build": "tsc",

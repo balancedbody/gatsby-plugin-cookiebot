@@ -5,6 +5,7 @@ import { PluginOptions } from "./types/types";
 import {
   INCLUDE_IN_DEVELOPMENT_DEFAULT,
   MANUAL_MODE_DEFAULT,
+  GEOREGIONS_DEFAULT,
 } from "./constants/constants";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -98,6 +99,7 @@ export const onRenderBody = (
     cookiebotId,
     manualMode = MANUAL_MODE_DEFAULT,
     includeInDevelopment = INCLUDE_IN_DEVELOPMENT_DEFAULT,
+    geoRegions = GEOREGIONS_DEFAULT
   } = pluginOptions;
 
   // Do not add script when in development. Can be overriden with plugin options.
@@ -111,6 +113,7 @@ export const onRenderBody = (
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
       data-cbid={cookiebotId}
+      data-georegions={geoRegions}
       type="text/javascript"
       async={manualMode ? true : undefined} // Undefined removes the attribute completely. Async needs to be removed entirely for automode to block all scripts.
     ></script>,
