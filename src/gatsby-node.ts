@@ -9,8 +9,6 @@ exports.pluginOptionsSchema = ({ Joi }) => {
     includeInDevelopment: Joi.boolean().description(
       `Enables plugin in development`
     ),
-    geoRegions: Joi.boolean().description(
-      `Add CookieBot regions`
-    )
+    geoRegions: Joi.string().description(`CookieBot regions`)
   });
 };
